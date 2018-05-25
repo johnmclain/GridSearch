@@ -1,20 +1,7 @@
-
-# coding: utf-8
-
-# In[1]:
-
-
 import torch
 import numpy as np
 import time
 from torch.autograd import Variable
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
-get_ipython().magic(u'matplotlib inline')
-
-
-# In[171]:
-
 
 class BAB_SHELL():
     def __init__(self):
@@ -170,9 +157,6 @@ class BAB_SHELL():
                 
                 self.variables[i*length:(i+1)*length, j*2] = a
                 self.variables[i*length:(i+1)*length, j*2+1] = a +                     (self.future_search[:, j*2+1] -                     self.future_search[:, j*2])*0.5
-
-
-# In[174]:
 
 
 class flowchart(torch.nn.Module):
